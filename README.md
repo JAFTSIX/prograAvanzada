@@ -1,2 +1,2 @@
-# prograAvenzada
+# prograAvanzada
 proyecto de progra avanzada
