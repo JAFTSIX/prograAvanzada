@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDVintageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_Articulo">
+    <Key>
+      <PropertyRef Name="no_articulo" />
+    </Key>
+    <Property Name="no_articulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="300" />
+    <Property Name="existencia" Type="int" />
+    <Property Name="Precio" Type="float" />
+    <Property Name="Descrip" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="tb_Cliente">
+    <Key>
+      <PropertyRef Name="id_Cliente" />
+    </Key>
+    <Property Name="id_Cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vNombre" Type="nvarchar" MaxLength="300" />
+    <Property Name="vApellido" Type="nvarchar" MaxLength="300" />
+    <Property Name="vApelldo2" Type="nvarchar" MaxLength="300" />
+    <Property Name="vContra" Type="nvarchar" MaxLength="300" />
+    <Property Name="iEdad" Type="int" />
+    <Property Name="id_direccion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Direccion">
+    <Key>
+      <PropertyRef Name="id_direccion" />
+    </Key>
+    <Property Name="id_direccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vpais" Type="nvarchar" MaxLength="300" />
+    <Property Name="VCiudad" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="tb_Encabezado">
+    <Key>
+      <PropertyRef Name="no_Compra" />
+    </Key>
+    <Property Name="no_Compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="total" Type="float" />
+    <Property Name="pend" Type="float" />
+    <Property Name="id_Cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Favoritos">
+    <Key>
+      <PropertyRef Name="pkFavoritos" />
+    </Key>
+    <Property Name="pkFavoritos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkReceta" Type="int" Nullable="false" />
+    <Property Name="id_Cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Historial">
+    <Key>
+      <PropertyRef Name="pkHistorial" />
+    </Key>
+    <Property Name="pkHistorial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="iCliente_id" Type="int" Nullable="false" />
+    <Property Name="fkReceta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_LineaPedido">
+    <Key>
+      <PropertyRef Name="no_Pedido" />
+    </Key>
+    <Property Name="no_Pedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="no_articulo" Type="int" Nullable="false" />
+    <Property Name="unidades" Type="int" />
+    <Property Name="precio_Unidad" Type="float" />
+    <Property Name="precio_Total" Type="float" />
+    <Property Name="no_Compra" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_Receta">
+    <Key>
+      <PropertyRef Name="pkReceta" />
+    </Key>
+    <Property Name="pkReceta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="40" />
+    <Property Name="Dfecha_publicacion" Type="date" />
+    <Property Name="vTexto" Type="nvarchar" MaxLength="300" />
+    <Property Name="vimgurl" Type="nvarchar" MaxLength="300" />
+    <Property Name="vVidurl" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <Association Name="fk_ClienteEN">
+    <End Role="tb_Cliente" Type="Self.tb_Cliente" Multiplicity="1" />
+    <End Role="tb_Encabezado" Type="Self.tb_Encabezado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Cliente">
+        <PropertyRef Name="id_Cliente" />
+      </Principal>
+      <Dependent Role="tb_Encabezado">
+        <PropertyRef Name="id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ClienteFA">
+    <End Role="tb_Cliente" Type="Self.tb_Cliente" Multiplicity="1" />
+    <End Role="tb_Favoritos" Type="Self.tb_Favoritos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Cliente">
+        <PropertyRef Name="id_Cliente" />
+      </Principal>
+      <Dependent Role="tb_Favoritos">
+        <PropertyRef Name="id_Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Clientehi">
+    <End Role="tb_Cliente" Type="Self.tb_Cliente" Multiplicity="1" />
+    <End Role="tb_Historial" Type="Self.tb_Historial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Cliente">
+        <PropertyRef Name="id_Cliente" />
+      </Principal>
+      <Dependent Role="tb_Historial">
+        <PropertyRef Name="iCliente_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_direccionCL">
+    <End Role="tb_Direccion" Type="Self.tb_Direccion" Multiplicity="1" />
+    <End Role="tb_Cliente" Type="Self.tb_Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Direccion">
+        <PropertyRef Name="id_direccion" />
+      </Principal>
+      <Dependent Role="tb_Cliente">
+        <PropertyRef Name="id_direccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_no_articuloLI">
+    <End Role="tb_Articulo" Type="Self.tb_Articulo" Multiplicity="1" />
+    <End Role="tb_LineaPedido" Type="Self.tb_LineaPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Articulo">
+        <PropertyRef Name="no_articulo" />
+      </Principal>
+      <Dependent Role="tb_LineaPedido">
+        <PropertyRef Name="no_articulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_no_CompraLI">
+    <End Role="tb_Encabezado" Type="Self.tb_Encabezado" Multiplicity="1" />
+    <End Role="tb_LineaPedido" Type="Self.tb_LineaPedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Encabezado">
+        <PropertyRef Name="no_Compra" />
+      </Principal>
+      <Dependent Role="tb_LineaPedido">
+        <PropertyRef Name="no_Compra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_recetaFA">
+    <End Role="tb_Receta" Type="Self.tb_Receta" Multiplicity="1" />
+    <End Role="tb_Favoritos" Type="Self.tb_Favoritos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Receta">
+        <PropertyRef Name="pkReceta" />
+      </Principal>
+      <Dependent Role="tb_Favoritos">
+        <PropertyRef Name="fkReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_recetahi">
+    <End Role="tb_Receta" Type="Self.tb_Receta" Multiplicity="1" />
+    <End Role="tb_Historial" Type="Self.tb_Historial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Receta">
+        <PropertyRef Name="pkReceta" />
+      </Principal>
+      <Dependent Role="tb_Historial">
+        <PropertyRef Name="fkReceta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDVintageModelStoreContainer">
+    <EntitySet Name="tb_Articulo" EntityType="Self.tb_Articulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Cliente" EntityType="Self.tb_Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Direccion" EntityType="Self.tb_Direccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Encabezado" EntityType="Self.tb_Encabezado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Favoritos" EntityType="Self.tb_Favoritos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Historial" EntityType="Self.tb_Historial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_LineaPedido" EntityType="Self.tb_LineaPedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_Receta" EntityType="Self.tb_Receta" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_ClienteEN" Association="Self.fk_ClienteEN">
+      <End Role="tb_Cliente" EntitySet="tb_Cliente" />
+      <End Role="tb_Encabezado" EntitySet="tb_Encabezado" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ClienteFA" Association="Self.fk_ClienteFA">
+      <End Role="tb_Cliente" EntitySet="tb_Cliente" />
+      <End Role="tb_Favoritos" EntitySet="tb_Favoritos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Clientehi" Association="Self.fk_Clientehi">
+      <End Role="tb_Cliente" EntitySet="tb_Cliente" />
+      <End Role="tb_Historial" EntitySet="tb_Historial" />
+    </AssociationSet>
+    <AssociationSet Name="fk_direccionCL" Association="Self.fk_direccionCL">
+      <End Role="tb_Direccion" EntitySet="tb_Direccion" />
+      <End Role="tb_Cliente" EntitySet="tb_Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="fk_no_articuloLI" Association="Self.fk_no_articuloLI">
+      <End Role="tb_Articulo" EntitySet="tb_Articulo" />
+      <End Role="tb_LineaPedido" EntitySet="tb_LineaPedido" />
+    </AssociationSet>
+    <AssociationSet Name="fk_no_CompraLI" Association="Self.fk_no_CompraLI">
+      <End Role="tb_Encabezado" EntitySet="tb_Encabezado" />
+      <End Role="tb_LineaPedido" EntitySet="tb_LineaPedido" />
+    </AssociationSet>
+    <AssociationSet Name="fk_recetaFA" Association="Self.fk_recetaFA">
+      <End Role="tb_Receta" EntitySet="tb_Receta" />
+      <End Role="tb_Favoritos" EntitySet="tb_Favoritos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_recetahi" Association="Self.fk_recetahi">
+      <End Role="tb_Receta" EntitySet="tb_Receta" />
+      <End Role="tb_Historial" EntitySet="tb_Historial" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

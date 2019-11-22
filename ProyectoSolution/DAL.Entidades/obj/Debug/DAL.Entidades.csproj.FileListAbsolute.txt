@@ -1,0 +1,11 @@
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\DAL.Entidades.dll.config
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\DAL.Entidades.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\DAL.Entidades.pdb
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\obj\Debug\DAL.Entidades.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\obj\Debug\DAL.Entidades.csproj.CopyComplete
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\obj\Debug\DAL.Entidades.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Entidades\obj\Debug\DAL.Entidades.pdb

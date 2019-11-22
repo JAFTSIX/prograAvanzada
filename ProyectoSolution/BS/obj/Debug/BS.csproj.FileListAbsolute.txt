@@ -1,0 +1,5 @@
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\bin\Debug\BS.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\bin\Debug\BS.pdb
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\obj\Debug\BS.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\obj\Debug\BS.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\obj\Debug\BS.pdb

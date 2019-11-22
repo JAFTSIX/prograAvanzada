@@ -1,0 +1,5 @@
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\bin\Debug\DAL.Repository.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\bin\Debug\DAL.Repository.pdb
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\obj\Debug\DAL.Repository.csprojAssemblyReference.cache
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\obj\Debug\DAL.Repository.dll
+C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\obj\Debug\DAL.Repository.pdb
