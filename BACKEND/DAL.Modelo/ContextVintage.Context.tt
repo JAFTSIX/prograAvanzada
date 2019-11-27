@@ -53,7 +53,7 @@ using System.Linq;
 }
 #>
 
-<#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : DbContext, IDisposable
+<#=Accessibility.ForType(container)#> partial class <#=code.Escape(container)#> : DbContext,IDisposable
 {
     public <#=code.Escape(container)#>()
         : base("name=<#=container.Name#>")
