@@ -8,11 +8,17 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
-    public class Repositorio<T> : iRepositorio<T>, IDisposable where T : class
+    public class Repositorio<T> : IRepositorio<T> where T : class
     {
 
         private readonly DbContext _context;
 
+
+
+        public Repositorio(DbContext context)
+        {
+            _context = context;
+        }
         public IQueryable<T> AsQueryable()
         {
             throw new NotImplementedException();
@@ -20,7 +26,7 @@ namespace DAL.Repository
 
         public IEnumerable<T> TraerTodo()
         {
-            throw new NotImplementedException();
+            return _context.Set<T>();
         }
 
         public IEnumerable<T> Buscar(Expression<Func<T, bool>> predicado)
@@ -58,9 +64,6 @@ namespace DAL.Repository
             throw new NotImplementedException();
         }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

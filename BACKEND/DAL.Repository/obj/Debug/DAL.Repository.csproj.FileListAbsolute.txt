@@ -3,3 +3,14 @@ C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Reposi
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\obj\Debug\DAL.Repository.csprojAssemblyReference.cache
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\obj\Debug\DAL.Repository.dll
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\DAL.Repository\obj\Debug\DAL.Repository.pdb
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\DAL.Repository.dll.config
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\DAL.Repository.dll
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\DAL.Repository.pdb
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.dll
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.xml
+C:\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.csprojAssemblyReference.cache
+C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.csproj.CopyComplete
+C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.dll
+C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.pdb

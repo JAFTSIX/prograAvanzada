@@ -12,8 +12,7 @@ namespace DAL.Modelo
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using DAL.Entidades;
-    
+    using BDVintageModel;    
     public partial class ConexionVintage : DbContext,IDisposable
     {
         public ConexionVintage()

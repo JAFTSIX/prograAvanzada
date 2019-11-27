@@ -3,3 +3,13 @@ C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\bin\Deb
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\obj\Debug\BS.csprojAssemblyReference.cache
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\obj\Debug\BS.dll
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\BS\obj\Debug\BS.pdb
+C:\prograAvanzada\BACKEND\BS\bin\Debug\BS.dll
+C:\prograAvanzada\BACKEND\BS\bin\Debug\BS.pdb
+C:\prograAvanzada\BACKEND\BS\bin\Debug\EntityFramework.dll
+C:\prograAvanzada\BACKEND\BS\bin\Debug\EntityFramework.SqlServer.dll
+C:\prograAvanzada\BACKEND\BS\bin\Debug\EntityFramework.xml
+C:\prograAvanzada\BACKEND\BS\bin\Debug\EntityFramework.SqlServer.xml
+C:\prograAvanzada\BACKEND\BS\obj\Debug\BS.csprojAssemblyReference.cache
+C:\prograAvanzada\BACKEND\BS\obj\Debug\BS.csproj.CopyComplete
+C:\prograAvanzada\BACKEND\BS\obj\Debug\BS.dll
+C:\prograAvanzada\BACKEND\BS\obj\Debug\BS.pdb

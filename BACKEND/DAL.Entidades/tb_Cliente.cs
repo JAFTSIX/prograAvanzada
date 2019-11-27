@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DAL.Entidades
+namespace BDVintageModel
 {
     using System;
     using System.Collections.Generic;
