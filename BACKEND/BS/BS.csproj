@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -50,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +61,32 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.Entidades\DAL.Entidades.csproj">
+      <Project>{16715291-b16c-4be2-ad56-061489c779af}</Project>
+      <Name>DAL.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL.Modelo\DAL.Modelo.csproj">
+      <Project>{b30c206a-e514-4775-aa63-c71227dfcbfa}</Project>
+      <Name>DAL.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL.Repository\DAL.Repository.csproj">
+      <Project>{c8653890-11ac-4deb-a5f1-d993228b9627}</Project>
+      <Name>DAL.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{ec5066dc-d8c4-4dd9-b1c1-8b2e1bc8a646}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DO\DO.csproj">
+      <Project>{257f7ee6-7f6d-4fcf-a978-d99958f3473f}</Project>
+      <Name>DO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Maps\Maps.csproj">
+      <Project>{aee4ffbc-2ec3-4346-87d2-d4ccee1a6ad5}</Project>
+      <Name>Maps</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
