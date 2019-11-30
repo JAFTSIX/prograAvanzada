@@ -11,7 +11,7 @@ namespace DAL.Repository
     {
         IQueryable<T> AsQueryable();
         IEnumerable<T> TraerTodo();
-        IEnumerable<T> Buscar(Expression<Func<T, bool>> predicado);
+        //IEnumerable<T> Buscar(Expression<Func<T, bool>> predicado);
         T TraerUno(Expression<Func<T, bool>> predicado);
         T TraerId(int Id);
 

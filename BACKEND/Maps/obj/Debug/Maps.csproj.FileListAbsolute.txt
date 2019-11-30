@@ -3,3 +3,17 @@ C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Maps\bin\D
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Maps\obj\Debug\Maps.csprojAssemblyReference.cache
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Maps\obj\Debug\Maps.dll
 C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Maps\obj\Debug\Maps.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\Maps.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\Maps.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\AutoMapper.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\DAL.Entidades.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\DO.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\DAL.Entidades.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\DAL.Entidades.dll.config
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\DO.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\AutoMapper.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\bin\Debug\AutoMapper.xml
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\obj\Debug\Maps.csprojAssemblyReference.cache
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\obj\Debug\Maps.csproj.CopyComplete
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\obj\Debug\Maps.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\Maps\obj\Debug\Maps.pdb

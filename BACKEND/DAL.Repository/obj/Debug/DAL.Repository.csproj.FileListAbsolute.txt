@@ -14,3 +14,14 @@ C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.csprojAssembly
 C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.csproj.CopyComplete
 C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.dll
 C:\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\DAL.Repository.dll.config
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\DAL.Repository.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\DAL.Repository.pdb
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.xml
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.csprojAssemblyReference.cache
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.csproj.CopyComplete
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.dll
+C:\ProyectoFinal\prograAvanzada\BACKEND\DAL.Repository\obj\Debug\DAL.Repository.pdb
