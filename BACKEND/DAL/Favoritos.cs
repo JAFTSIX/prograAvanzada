@@ -9,7 +9,7 @@ using DAL.Repository;
 
 namespace DAL
 {
-    class Favoritos
+   public class Favoritos
 
     {
 

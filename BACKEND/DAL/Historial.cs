@@ -9,7 +9,7 @@ using DAL.Repository;
 
 namespace DAL
 {
-    class Historial
+    public class Historial
     {
         private readonly Repositorio<tb_Historial> _repositorio = new Repositorio<tb_Historial>(new ConexionVintage());
         public void Agregar(tb_Historial entidad)

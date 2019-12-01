@@ -10,7 +10,7 @@ using DAL.Repository;
 
 namespace DAL
 {
-    class receta
+    public class Receta
     {
 
         private readonly Repositorio<tb_Receta> _repositorio = new Repositorio<tb_Receta>(new ConexionVintage());

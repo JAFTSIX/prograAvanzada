@@ -9,7 +9,7 @@ using DAL.Repository;
 
 namespace DAL
 {
-    class Articulo
+    public  class Articulo
     {
 
         private readonly Repositorio<tb_Articulo> _repositorio = new Repositorio<tb_Articulo>(new ConexionVintage());

@@ -12,7 +12,7 @@ using System.Linq.Expressions;
 
 namespace BS
 {
-    class Cliente : ICRUD<ent.Cliente>
+   public  class Cliente : ICRUD<ent.Cliente>
     {
         public void Agregar(ent.Cliente t)
         {

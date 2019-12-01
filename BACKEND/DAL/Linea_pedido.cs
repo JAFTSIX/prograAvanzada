@@ -9,7 +9,7 @@ using DAL.Repository;
 
 namespace DAL
 {
-    class Linea_pedido
+    public class Linea_pedido
     {
         private readonly Repositorio<tb_LineaPedido> _repositorio = new Repositorio<tb_LineaPedido>(new ConexionVintage());
         public void Agregar(tb_LineaPedido entidad)

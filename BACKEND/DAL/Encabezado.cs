@@ -11,7 +11,7 @@ using DAL.Repository;
 
 namespace DAL
 {
-    class Encabezado
+   public class Encabezado
     {
         private readonly Repositorio<tb_Encabezado> _repositorio = new Repositorio<tb_Encabezado>(new ConexionVintage());
         public void Agregar(tb_Encabezado entidad)
