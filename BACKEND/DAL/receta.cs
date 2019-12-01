@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+
 using BDVintageModel;
 using DAL.Modelo;
 using DAL.Repository;
 
-
 namespace DAL
 {
-    public class Direccion  
+    class receta
     {
-        private readonly Repositorio<tb_Direccion> _repositorio = new Repositorio<tb_Direccion>(new ConexionVintage());
-        public void Agregar(tb_Direccion entidad)
+
+        private readonly Repositorio<tb_Receta> _repositorio = new Repositorio<tb_Receta>(new ConexionVintage());
+        public void Agregar(tb_Receta entidad)
         {
             _repositorio.Agregar(entidad);
             _repositorio.Guardar();
         }
 
 
-        public void Eliminar(tb_Direccion entidad)
+        public void Eliminar(tb_Receta entidad)
         {
             _repositorio.Eliminar(entidad);
             _repositorio.Guardar();
@@ -32,22 +32,20 @@ namespace DAL
             _repositorio.Guardar();
         }
 
-        public void Modificar(tb_Direccion entidad)
+        public void Modificar(tb_Receta entidad)
         {
             _repositorio.Modificar(entidad);
             _repositorio.Guardar();
         }
 
-        public tb_Direccion TraerId(int Id)
+        public tb_Receta TraerId(int Id)
         {
             return _repositorio.TraerId(Id);
         }
 
-        public IEnumerable<tb_Direccion> TraerTodo()
+        public IEnumerable<tb_Receta> TraerTodo()
         {
             return _repositorio.TraerTodo().ToList();
         }
-
-       
     }
 }
