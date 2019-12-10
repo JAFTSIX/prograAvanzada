@@ -11,7 +11,7 @@ using BDVintageModel;
 using AutoMapper;
 namespace BS
 {
-    class Receta: ICRUD<DO.Objeto.Receta>
+    public class Receta: ICRUD<DO.Objeto.Receta>
     {
 
         public void Agregar(DO.Objeto.Receta t)
