@@ -26,5 +26,33 @@ namespace PaginaVisual.Controllers
 
             return View();
         }
+
+        public ActionResult blog()
+        {
+            ViewBag.Message = "Your blog page.";
+
+            return View();
+        }
+
+        public ActionResult gallery()
+        {
+            ViewBag.Message = "Your gallery page.";
+
+            return View();
+        }
+
+        public ActionResult service()
+        {
+            ViewBag.Message = "Your service page.";
+
+            return View();
+        }
+
+        public ActionResult single()
+        {
+            ViewBag.Message = "Your single page.";
+
+            return View();
+        }
     }
 }
