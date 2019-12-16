@@ -1,4 +1,0 @@
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Services\bin\Debug\Services.dll
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Services\bin\Debug\Services.pdb
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Services\obj\Debug\Services.dll
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Services\obj\Debug\Services.pdb

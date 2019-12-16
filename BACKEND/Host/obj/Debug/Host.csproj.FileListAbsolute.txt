@@ -1,5 +1,0 @@
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Host\bin\Debug\Host.dll
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Host\bin\Debug\Host.pdb
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Host\obj\Debug\Host.csprojAssemblyReference.cache
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Host\obj\Debug\Host.dll
-C:\Users\Fabian\Desktop\ProyectoFinal\prograAvanzada\ProyectoSolution\Host\obj\Debug\Host.pdb
