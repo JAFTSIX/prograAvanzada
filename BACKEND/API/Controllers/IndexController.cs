@@ -9,7 +9,19 @@ using ent = DO.Objeto;
 
 namespace API.Controllers
 {
+
+    [Route("api/index")]
     public class IndexController : ApiController
     {
+
+        [Route("api/index/index")]
+        [HttpGet]
+        public IEnumerable<ent.Receta> index()
+        {
+
+
+            return new BS.Receta().TraerIndex();
+        }
+
     }
 }
