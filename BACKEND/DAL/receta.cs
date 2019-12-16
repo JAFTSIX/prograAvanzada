@@ -47,5 +47,10 @@ namespace DAL
         {
             return _repositorio.TraerTodo().ToList();
         }
+
+        public IEnumerable<tb_Receta> TraerIndex()
+        {
+            return _repositorio.TraerIndex().ToList();
+        }
     }
 }

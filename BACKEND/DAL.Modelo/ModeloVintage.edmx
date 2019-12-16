@@ -4,13 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BDVintageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BDVintageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_Articulo">
           <Key>
             <PropertyRef Name="no_articulo" />
           </Key>
           <Property Name="no_articulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="nvarchar" MaxLength="300" />
+          <Property Name="Vurl" Type="nvarchar" MaxLength="300" />
           <Property Name="existencia" Type="int" />
           <Property Name="Precio" Type="float" />
           <Property Name="Descrip" Type="nvarchar" MaxLength="300" />
@@ -40,7 +41,7 @@
             <PropertyRef Name="no_Compra" />
           </Key>
           <Property Name="no_Compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fecha" Type="date" />
+          <Property Name="fecha" Type="datetime" />
           <Property Name="total" Type="float" />
           <Property Name="pend" Type="float" />
           <Property Name="id_Cliente" Type="int" Nullable="false" />
@@ -58,7 +59,7 @@
             <PropertyRef Name="pkHistorial" />
           </Key>
           <Property Name="pkHistorial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fecha" Type="date" />
+          <Property Name="fecha" Type="datetime" />
           <Property Name="iCliente_id" Type="int" Nullable="false" />
           <Property Name="fkReceta" Type="int" Nullable="false" />
         </EntityType>
@@ -79,7 +80,7 @@
           </Key>
           <Property Name="pkReceta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="40" />
-          <Property Name="Dfecha_publicacion" Type="date" />
+          <Property Name="Dfecha_publicacion" Type="datetime" />
           <Property Name="vTexto" Type="nvarchar" MaxLength="300" />
           <Property Name="vimgurl" Type="nvarchar" MaxLength="300" />
           <Property Name="vVidurl" Type="nvarchar" MaxLength="300" />
@@ -222,8 +223,7 @@
             <End Role="tb_Historial" EntitySet="tb_Historial" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDVintageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -237,6 +237,7 @@
           <Property Name="Precio" Type="Double" />
           <Property Name="Descrip" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tb_LineaPedido" Relationship="Self.fk_no_articuloLI" FromRole="tb_Articulo" ToRole="tb_LineaPedido" />
+          <Property Name="Vurl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tb_Cliente">
           <Key>
@@ -268,7 +269,7 @@
             <PropertyRef Name="no_Compra" />
           </Key>
           <Property Name="no_Compra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="fecha" Type="DateTime" Precision="3" />
           <Property Name="total" Type="Double" />
           <Property Name="pend" Type="Double" />
           <Property Name="id_Cliente" Type="Int32" Nullable="false" />
@@ -290,7 +291,7 @@
             <PropertyRef Name="pkHistorial" />
           </Key>
           <Property Name="pkHistorial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="fecha" Type="DateTime" Precision="3" />
           <Property Name="iCliente_id" Type="Int32" Nullable="false" />
           <Property Name="fkReceta" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_Cliente" Relationship="Self.fk_Clientehi" FromRole="tb_Historial" ToRole="tb_Cliente" />
@@ -315,7 +316,7 @@
           </Key>
           <Property Name="pkReceta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Name="Dfecha_publicacion" Type="DateTime" Precision="0" />
+          <Property Name="Dfecha_publicacion" Type="DateTime" Precision="3" />
           <Property Name="vTexto" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="vimgurl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="vVidurl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
@@ -469,6 +470,7 @@
           <EntitySetMapping Name="tb_Articulo">
             <EntityTypeMapping TypeName="BDVintageModel.tb_Articulo">
               <MappingFragment StoreEntitySet="tb_Articulo">
+                <ScalarProperty Name="Vurl" ColumnName="Vurl" />
                 <ScalarProperty Name="no_articulo" ColumnName="no_articulo" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="existencia" ColumnName="existencia" />

@@ -25,6 +25,7 @@ namespace BDVintageModel
         public Nullable<int> existencia { get; set; }
         public Nullable<double> Precio { get; set; }
         public string Descrip { get; set; }
+        public string Vurl { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_LineaPedido> tb_LineaPedido { get; set; }

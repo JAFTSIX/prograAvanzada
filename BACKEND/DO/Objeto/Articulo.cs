@@ -13,5 +13,6 @@ namespace DO.Objeto
         public Nullable<int> existencia { get; set; }
         public Nullable<double> Precio { get; set; }
         public string Descrip { get; set; }
+        public string Vurl { get; set; }
     }
 }

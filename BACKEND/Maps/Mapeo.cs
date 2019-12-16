@@ -10,7 +10,7 @@ using dato = BDVintageModel;//Algun tonto no le puso el namespace bien cuando cr
 
 namespace Maps
 {
-    class Mapeo
+    public class Mapeo
     {
         public static void CrearMapas()
         {
@@ -42,8 +42,7 @@ namespace Maps
                     Mapa.CreateMap<ent.Receta, dato.tb_Receta>();
                     Mapa.CreateMap<dato.tb_Receta, ent.Receta>();
 
-                    //Mapa.CreateMap<ent.Etiqueta, dato.tb_Etiqueta>();
-                    //Mapa.CreateMap<dato.tb_Etiqueta, ent.Etiqueta>();
+                   
 
                 });
             }

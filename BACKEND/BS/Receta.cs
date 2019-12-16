@@ -11,7 +11,7 @@ using BDVintageModel;
 using AutoMapper;
 namespace BS
 {
-    class Receta: ICRUD<DO.Objeto.Receta>
+    public class Receta: ICRUD<DO.Objeto.Receta>
     {
 
         public void Agregar(DO.Objeto.Receta t)
@@ -46,6 +46,11 @@ namespace BS
             return Result;
         }
 
-
+        public IEnumerable<DO.Objeto.Receta> TraerIndex()
+        {
+            var consulta = new DAL.Receta().TraerIndex();
+            var Result = Mapper.Map<IEnumerable<tb_Receta>, IEnumerable<DO.Objeto.Receta>>(consulta);
+            return Result;
+        }
     }
 }

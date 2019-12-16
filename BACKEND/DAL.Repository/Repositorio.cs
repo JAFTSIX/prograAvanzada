@@ -81,6 +81,11 @@ namespace DAL.Repository
             return _context.Set<T>();
         }
 
+        public IEnumerable<T> TraerIndex()
+        {
+            return _context.Set<T>().SqlQuery("select top 10 * from tb_Receta");
+        }
+
         public T TraerUno(System.Linq.Expressions.Expression<Func<T, bool>> predicado)
         {
             return _context.Set<T>().Where(predicado).FirstOrDefault();
