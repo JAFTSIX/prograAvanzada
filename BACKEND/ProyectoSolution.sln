@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maps", "Maps\Maps.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{D64BB571-3779-427D-BEB4-68230AC7DF1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIVintage", "APIVintage\APIVintage.csproj", "{D9DF4A97-5FD8-42D7-A0D9-7335C9AA06DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +55,21 @@ Global
 		{AEE4FFBC-2EC3-4346-87D2-D4CCEE1A6AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE4FFBC-2EC3-4346-87D2-D4CCEE1A6AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE4FFBC-2EC3-4346-87D2-D4CCEE1A6AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{D64BB571-3779-427D-BEB4-68230AC7DF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D64BB571-3779-427D-BEB4-68230AC7DF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D64BB571-3779-427D-BEB4-68230AC7DF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D64BB571-3779-427D-BEB4-68230AC7DF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{1264D0B0-56E7-4D0E-81D4-44CC45D5E6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1264D0B0-56E7-4D0E-81D4-44CC45D5E6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1264D0B0-56E7-4D0E-81D4-44CC45D5E6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1264D0B0-56E7-4D0E-81D4-44CC45D5E6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DF4A97-5FD8-42D7-A0D9-7335C9AA06DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DF4A97-5FD8-42D7-A0D9-7335C9AA06DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DF4A97-5FD8-42D7-A0D9-7335C9AA06DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DF4A97-5FD8-42D7-A0D9-7335C9AA06DA}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 42cb1a55288d6dd019d1b39ca7e5a4e4c66adffc
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

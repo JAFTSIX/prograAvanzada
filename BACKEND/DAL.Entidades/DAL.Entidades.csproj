@@ -93,6 +93,7 @@
     <Content Include="ContextVintage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ContextVintage.cs</LastGenOutput>
+      <CustomToolNamespace>BDVintageModel</CustomToolNamespace>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
