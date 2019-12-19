@@ -266,7 +266,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\service.cshtml" />
+    <Content Include="Views\Home\Recetas.cshtml" />
     <Content Include="Views\Shared\LayoutMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
