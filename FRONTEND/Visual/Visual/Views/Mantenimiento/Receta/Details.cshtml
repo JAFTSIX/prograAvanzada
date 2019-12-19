@@ -1,0 +1,67 @@
+﻿@model Visual.Models.RecetasViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RecetasViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pkReceta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pkReceta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dfecha_publicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dfecha_publicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vTexto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vTexto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vimgurl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vimgurl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vVidurl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vVidurl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

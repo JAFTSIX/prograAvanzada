@@ -34,5 +34,15 @@ namespace API.Controllers
         }
 
 
+
+        [Route("api/operations/login")]
+        [HttpPost]
+        public void login(ent.Cliente cliente)
+        {
+
+
+            //new BS.compras().comprar(pedido);
+        }
+
     }
 }

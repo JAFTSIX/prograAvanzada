@@ -37,5 +37,10 @@ namespace BS
 
 
         }
+
+        public ent.Cliente GetOneById(int id)
+        {
+            return new BS.Cliente().TraerId(id);
+        }
     }
 }
