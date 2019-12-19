@@ -64,6 +64,7 @@ namespace DAL.Repository
             if(_context.Entry(entidad).State == System.Data.Entity.EntityState.Detached)
             {
                 _context.Set<T>().Attach(entidad);
+                _context.Entry<T>(entidad).State = System.Data.Entity.EntityState.Modified;
             }
             else
             {
