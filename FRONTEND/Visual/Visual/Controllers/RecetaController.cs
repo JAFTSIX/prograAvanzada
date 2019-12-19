@@ -51,7 +51,7 @@ namespace Visual.Controllers
             {
                 client.BaseAddress = new Uri("https://localhost:44311/api/");
                 //HTTP GET
-                var responseTask = client.GetAsync("recetas/GetOneById/5?id="+id);
+                var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
                 responseTask.Wait();
 
                 var result = responseTask.Result;
@@ -85,31 +85,50 @@ namespace Visual.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "pkReceta,nombre,Dfecha_publicacion,vTexto,vimgurl,vVidurl")] RecetasViewModel receta)
+        public ActionResult Create(RecetasViewModel receta)
         {
-            if (ModelState.IsValid)
+            using (var client = new HttpClient())
             {
-                db.tb_Receta.Add(tb_Receta);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                client.BaseAddress = new Uri("https://localhost:44311/api/");
+
+                //HTTP POST
+                var postTask = client.PostAsJsonAsync<RecetasViewModel>("recetas/Insert", receta);
+                postTask.Wait();
+
+                var result = postTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index");
+                }
             }
 
-            return View(tb_Receta);
+            ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");
+
+            return View(receta);
         }
 
         // GET: Receta/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
+            RecetasViewModel receta = null;
+
+            using (var client = new HttpClient())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<RecetasViewModel>();
+                    readTask.Wait();
+
+                    receta = readTask.Result;
+                }
             }
-            tb_Receta tb_Receta = db.tb_Receta.Find(id);
-            if (tb_Receta == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tb_Receta);
+            return View(receta);
         }
 
         // POST: Receta/Edit/5
@@ -117,50 +136,66 @@ namespace Visual.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "pkReceta,nombre,Dfecha_publicacion,vTexto,vimgurl,vVidurl")] tb_Receta tb_Receta)
+        public ActionResult Edit(RecetasViewModel receta)
         {
-            if (ModelState.IsValid)
+            using (var client = new HttpClient())
             {
-                db.Entry(tb_Receta).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                client.BaseAddress = new Uri("https://localhost:44311/api/");
+
+                //HTTP POST
+                var putTask = client.PutAsJsonAsync<RecetasViewModel>("recetas/Update", receta);
+                putTask.Wait();
+
+                var result = putTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+
+                    return RedirectToAction("Index");
+                }
             }
-            return View(tb_Receta);
+            return View(receta);
         }
 
         // GET: Receta/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
+            using (var client = new HttpClient())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            tb_Receta tb_Receta = db.tb_Receta.Find(id);
-            if (tb_Receta == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tb_Receta);
-        }
+                client.BaseAddress = new Uri("https://localhost:44311/api/");
 
-        // POST: Receta/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            tb_Receta tb_Receta = db.tb_Receta.Find(id);
-            db.tb_Receta.Remove(tb_Receta);
-            db.SaveChanges();
+                //HTTP DELETE
+                var deleteTask = client.DeleteAsync("recetas/Delete" + id.ToString());
+                deleteTask.Wait();
+
+                var result = deleteTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+
+                    return RedirectToAction("Index");
+                }
+            }
+
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        // POST: Receta/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    tb_Receta tb_Receta = db.tb_Receta.Find(id);
+        //    db.tb_Receta.Remove(tb_Receta);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        db.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }
