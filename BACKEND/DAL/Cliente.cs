@@ -38,5 +38,10 @@ namespace DAL
         {
             return _repositorio.TraerId(id);
         }
+
+        public IEnumerable<dato.tb_Cliente>  login(DO.Objeto.Cliente t )
+        {
+            return _repositorio.login(t.vCorreo,t.vContra);
+        }
     }
 }

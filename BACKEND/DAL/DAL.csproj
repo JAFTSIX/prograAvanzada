@@ -74,6 +74,10 @@
       <Project>{c8653890-11ac-4deb-a5f1-d993228b9627}</Project>
       <Name>DAL.Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DO\DO.csproj">
+      <Project>{257f7ee6-7f6d-4fcf-a978-d99958f3473f}</Project>
+      <Name>DO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

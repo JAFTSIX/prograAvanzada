@@ -38,9 +38,24 @@ namespace BS
 
         }
 
-        public ent.Cliente GetOneById(int id)
+        public DO.Objeto.Cliente Login(DO.Objeto.Cliente t)
         {
-            return new BS.Cliente().TraerId(id);
+
+
+            IEnumerable<tb_Cliente> pip= new DAL.Cliente().login(t);
+            if (pip.Count() == 1)
+            {
+                
+                
+                var _ent = Mapper.Map<BDVintageModel.tb_Cliente, DO.Objeto.Cliente>(pip.First());
+                return _ent;
+            }
+            else {
+                return t;
+            }
+
+            
+            
         }
     }
 }

@@ -42,6 +42,11 @@ namespace DAL.Repository
             return _context.Set<T>().AsQueryable();
         }
 
+        public IEnumerable<T> login(string vCorreo, string vContra)
+        {
+            return _context.Set<T>().SqlQuery("SELECT * FROM[dbo].[tb_Cliente]  WHERE[vCorreo] = '"+vCorreo+"'  AND[vContra] = '"+vContra+"'"); 
+        }
+
         //public IEnumerable<T> Buscar(System.Linq.Expressions.Expression<Func<T, bool>> predicado)
         //{
         //    return _context.Set<T>().Where(predicado);
