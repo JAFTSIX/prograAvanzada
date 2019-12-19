@@ -10,11 +10,11 @@ using ent = DO.Objeto;
 namespace API.Controllers
 {
 
-    [Route("api/index")]
+    [Route("api/operations")]
     public class IndexController : ApiController
     {
 
-        [Route("api/index/index")]
+        [Route("api/operations/index")]
         [HttpGet]
         public IEnumerable<ent.Receta> index()
         {
@@ -22,6 +22,17 @@ namespace API.Controllers
 
             return new BS.Receta().TraerIndex();
         }
+
+
+        [Route("api/operations/compra")]    
+        [HttpPost]
+        public void comprar(ent.Pedido pedido)
+        {
+
+
+            new BS.compras().comprar(pedido);
+        }
+
 
     }
 }

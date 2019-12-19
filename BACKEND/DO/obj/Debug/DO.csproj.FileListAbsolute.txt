@@ -8,3 +8,8 @@ C:\ProyectoFinal\prograAvanzada\BACKEND\DO\bin\Debug\DO.pdb
 C:\ProyectoFinal\prograAvanzada\BACKEND\DO\obj\Debug\DO.csprojAssemblyReference.cache
 C:\ProyectoFinal\prograAvanzada\BACKEND\DO\obj\Debug\DO.dll
 C:\ProyectoFinal\prograAvanzada\BACKEND\DO\obj\Debug\DO.pdb
+C:\prograAvanzada\BACKEND\DO\bin\Debug\DO.dll
+C:\prograAvanzada\BACKEND\DO\bin\Debug\DO.pdb
+C:\prograAvanzada\BACKEND\DO\obj\Debug\DO.csprojAssemblyReference.cache
+C:\prograAvanzada\BACKEND\DO\obj\Debug\DO.dll
+C:\prograAvanzada\BACKEND\DO\obj\Debug\DO.pdb

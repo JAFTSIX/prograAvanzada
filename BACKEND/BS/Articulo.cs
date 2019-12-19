@@ -20,6 +20,8 @@ namespace BS
             new DAL.Articulo().Agregar(_ent);
         }
 
+   
+
         public void Eliminar(DO.Objeto.Articulo t)
         {
             var _ent = Mapper.Map<DO.Objeto.Articulo, tb_Articulo>(t);

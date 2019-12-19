@@ -50,6 +50,7 @@
     <Compile Include="Objeto\Favoritos.cs" />
     <Compile Include="Objeto\Historial.cs" />
     <Compile Include="Objeto\LineaPedido.cs" />
+    <Compile Include="Objeto\Pedido.cs" />
     <Compile Include="Objeto\Receta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
