@@ -11,10 +11,10 @@
           </Key>
           <Property Name="no_articulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="nvarchar" MaxLength="300" />
-          <Property Name="Vurl" Type="nvarchar" MaxLength="300" />
           <Property Name="existencia" Type="int" />
           <Property Name="Precio" Type="float" />
           <Property Name="Descrip" Type="nvarchar" MaxLength="300" />
+          <Property Name="Vurl" Type="nvarchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="tb_Cliente">
           <Key>
@@ -22,6 +22,8 @@
           </Key>
           <Property Name="id_Cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="vNombre" Type="nvarchar" MaxLength="300" />
+          <Property Name="vROL" Type="nvarchar" MaxLength="300" />
+          <Property Name="vCorreo" Type="nvarchar" MaxLength="300" />
           <Property Name="vApellido" Type="nvarchar" MaxLength="300" />
           <Property Name="vApelldo2" Type="nvarchar" MaxLength="300" />
           <Property Name="vContra" Type="nvarchar" MaxLength="300" />
@@ -254,6 +256,8 @@
           <NavigationProperty Name="tb_Favoritos" Relationship="Self.fk_ClienteFA" FromRole="tb_Cliente" ToRole="tb_Favoritos" />
           <NavigationProperty Name="tb_Historial" Relationship="Self.fk_Clientehi" FromRole="tb_Cliente" ToRole="tb_Historial" />
           <NavigationProperty Name="tb_Direccion" Relationship="Self.fk_direccionCL" FromRole="tb_Cliente" ToRole="tb_Direccion" />
+          <Property Name="vROL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="vCorreo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tb_Direccion">
           <Key>
@@ -482,6 +486,8 @@
           <EntitySetMapping Name="tb_Cliente">
             <EntityTypeMapping TypeName="BDVintageModel.tb_Cliente">
               <MappingFragment StoreEntitySet="tb_Cliente">
+                <ScalarProperty Name="vCorreo" ColumnName="vCorreo" />
+                <ScalarProperty Name="vROL" ColumnName="vROL" />
                 <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
                 <ScalarProperty Name="vNombre" ColumnName="vNombre" />
                 <ScalarProperty Name="vApellido" ColumnName="vApellido" />

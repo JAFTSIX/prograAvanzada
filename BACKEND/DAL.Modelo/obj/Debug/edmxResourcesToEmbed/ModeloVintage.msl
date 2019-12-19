@@ -4,6 +4,7 @@
     <EntitySetMapping Name="tb_Articulo">
       <EntityTypeMapping TypeName="BDVintageModel.tb_Articulo">
         <MappingFragment StoreEntitySet="tb_Articulo">
+          <ScalarProperty Name="Vurl" ColumnName="Vurl" />
           <ScalarProperty Name="no_articulo" ColumnName="no_articulo" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="existencia" ColumnName="existencia" />
@@ -15,6 +16,8 @@
     <EntitySetMapping Name="tb_Cliente">
       <EntityTypeMapping TypeName="BDVintageModel.tb_Cliente">
         <MappingFragment StoreEntitySet="tb_Cliente">
+          <ScalarProperty Name="vCorreo" ColumnName="vCorreo" />
+          <ScalarProperty Name="vROL" ColumnName="vROL" />
           <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
           <ScalarProperty Name="vNombre" ColumnName="vNombre" />
           <ScalarProperty Name="vApellido" ColumnName="vApellido" />

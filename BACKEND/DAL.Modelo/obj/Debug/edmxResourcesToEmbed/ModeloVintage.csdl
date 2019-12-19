@@ -10,6 +10,7 @@
     <Property Name="Precio" Type="Double" />
     <Property Name="Descrip" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="tb_LineaPedido" Relationship="Self.fk_no_articuloLI" FromRole="tb_Articulo" ToRole="tb_LineaPedido" />
+    <Property Name="Vurl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tb_Cliente">
     <Key>
@@ -26,6 +27,8 @@
     <NavigationProperty Name="tb_Favoritos" Relationship="Self.fk_ClienteFA" FromRole="tb_Cliente" ToRole="tb_Favoritos" />
     <NavigationProperty Name="tb_Historial" Relationship="Self.fk_Clientehi" FromRole="tb_Cliente" ToRole="tb_Historial" />
     <NavigationProperty Name="tb_Direccion" Relationship="Self.fk_direccionCL" FromRole="tb_Cliente" ToRole="tb_Direccion" />
+    <Property Name="vROL" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="vCorreo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tb_Direccion">
     <Key>
@@ -41,7 +44,7 @@
       <PropertyRef Name="no_Compra" />
     </Key>
     <Property Name="no_Compra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
     <Property Name="total" Type="Double" />
     <Property Name="pend" Type="Double" />
     <Property Name="id_Cliente" Type="Int32" Nullable="false" />
@@ -63,7 +66,7 @@
       <PropertyRef Name="pkHistorial" />
     </Key>
     <Property Name="pkHistorial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
     <Property Name="iCliente_id" Type="Int32" Nullable="false" />
     <Property Name="fkReceta" Type="Int32" Nullable="false" />
     <NavigationProperty Name="tb_Cliente" Relationship="Self.fk_Clientehi" FromRole="tb_Historial" ToRole="tb_Cliente" />
@@ -88,7 +91,7 @@
     </Key>
     <Property Name="pkReceta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="Dfecha_publicacion" Type="DateTime" Precision="0" />
+    <Property Name="Dfecha_publicacion" Type="DateTime" Precision="3" />
     <Property Name="vTexto" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="vimgurl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="vVidurl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />

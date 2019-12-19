@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextVintage.Context.cs">
+    <Compile Include="ModeloVintage.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ContextVintage.Context.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="ModeloVintage.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,9 +89,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContextVintage.Context.tt">
+    <Content Include="ModeloVintage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ContextVintage.Context.cs</LastGenOutput>
+      <LastGenOutput>ModeloVintage.Context.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

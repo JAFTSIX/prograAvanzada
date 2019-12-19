@@ -15,5 +15,7 @@ namespace DO.Objeto
         public string vContra { get; set; }
         public Nullable<int> iEdad { get; set; }
         public int id_direccion { get; set; }
+        public string vROL { get; set; }
+        public string vCorreo { get; set; }
     }
 }

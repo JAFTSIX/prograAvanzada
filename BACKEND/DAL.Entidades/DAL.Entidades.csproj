@@ -51,35 +51,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextVintage.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+    <Compile Include="ModeloVintage.cs">
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tb_Articulo.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Cliente.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Direccion.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Encabezado.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Favoritos.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Historial.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_LineaPedido.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Receta.cs">
-      <DependentUpon>ContextVintage.tt</DependentUpon>
+      <DependentUpon>ModeloVintage.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -90,9 +90,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContextVintage.tt">
+    <Content Include="ModeloVintage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ContextVintage.cs</LastGenOutput>
+      <LastGenOutput>ModeloVintage.cs</LastGenOutput>
       <CustomToolNamespace>BDVintageModel</CustomToolNamespace>
     </Content>
   </ItemGroup>

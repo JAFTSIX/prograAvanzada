@@ -29,6 +29,8 @@ namespace BDVintageModel
         public string vContra { get; set; }
         public Nullable<int> iEdad { get; set; }
         public int id_direccion { get; set; }
+        public string vROL { get; set; }
+        public string vCorreo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_Encabezado> tb_Encabezado { get; set; }
