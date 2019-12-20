@@ -126,6 +126,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClienteMantController.cs" />
+    <Compile Include="Controllers\HistorialMantController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MantenimientoController.cs" />
     <Compile Include="Controllers\mapeador.cs" />
@@ -226,10 +228,16 @@
     <Content Include="Views\ProductoMant\Delete.cshtml" />
     <Content Include="Views\ProductoMant\Edit.cshtml" />
     <Content Include="Views\ProductoMant\Details.cshtml" />
+    <Content Include="Views\ClienteMant\Index.cshtml" />
+    <Content Include="Views\ClienteMant\Details.cshtml" />
+    <Content Include="Views\ClienteMant\Create.cshtml" />
+    <Content Include="Views\ClienteMant\Edit.cshtml" />
+    <Content Include="Views\ClienteMant\Delete.cshtml" />
+    <Content Include="Views\HistorialMant\Index.cshtml" />
+    <Content Include="Views\HistorialMant\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ClienteMant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

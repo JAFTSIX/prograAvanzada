@@ -1,0 +1,98 @@
+﻿@model Visual.Models.ClientesViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ClientesViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.id_Cliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.id_Cliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vNombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vNombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vApellido)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vApellido)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vApelldo2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vApelldo2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vContra)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vContra)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.iEdad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.iEdad)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.id_direccion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.id_direccion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vROL)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vROL)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vCorreo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vCorreo)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

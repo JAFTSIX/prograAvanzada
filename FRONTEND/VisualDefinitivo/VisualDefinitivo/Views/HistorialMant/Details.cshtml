@@ -1,0 +1,65 @@
+﻿@model Visual.Models.HistorialViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>
+        <h4>HistorialViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.pkHistorial)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.pkHistorial)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fecha)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fecha)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.iCliente_id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.iCliente_id)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fkReceta)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fkReceta)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
