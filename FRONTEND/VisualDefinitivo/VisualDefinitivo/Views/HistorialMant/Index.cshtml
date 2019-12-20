@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Visual.Models.HistorialViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Index</h2>
+
+<p>
+ 
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.pkHistorial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.iCliente_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fkReceta)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.pkHistorial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iCliente_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fkReceta)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new { id = item.pkHistorial }) |
+
+            </td>
+        </tr>
+    }
+
+</table>

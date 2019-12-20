@@ -55,9 +55,15 @@
                 <label for="drop" class="toggle">Menu</label>
                 <input type="checkbox" id="drop">
                 <ul class="menu mt-2">
-                    <li>
-                        @Html.ActionLink("MANTENIMIENTO", "Index", "Mantenimiento")
-                    </li>
+                    @if (VisualDefinitivo.Models.Cliente.INSTANCIA.vROL=="ADMIN")
+                    {
+                        <li>
+                            @Html.ActionLink("MANTENIMIENTO", "Index", "Mantenimiento")
+                        </li>
+                    }
+
+
+
                     <li class="active">
                         @Html.ActionLink("Principal", "Index", "Home")
                     </li>
@@ -100,40 +106,41 @@
                             {
 
                                 <h1></h1>
-                            <li>@using (Html.BeginForm("personal", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                            { 
-                            
-                              <input type="submit" value="@VisualDefinitivo.Models.Cliente.INSTANCIA.vNombre" class="btn btn-default" />
-                            }
-                                    </li>
+                            <li>
+                                @using (Html.BeginForm("personal", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+
+                                    <input type="submit" value="@VisualDefinitivo.Models.Cliente.INSTANCIA.vNombre" class="btn btn-default" />
+                                }
+                        </li>
 
 
-                            
-                            using (Html.BeginForm("logout", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                            { 
-                            
-                              <input type="submit" value="Logout" class="btn btn-default" />
-                            }
-                             
 
-                            }
-                            else if (Session["login"] == "no")
-                            {
-                            @Html.ActionLink("Iniciar Sesión", "Loguearse", "home")
-                            }
+                        using (Html.BeginForm("logout", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+
+                            <input type="submit" value="Logout" class="btn btn-default" />
+                        }
+
 
                     }
-                    else
+                    else if (Session["login"] == "no")
                     {
                         @Html.ActionLink("Iniciar Sesión", "Loguearse", "home")
                     }
 
-                    </li>
+                }
+                else
+                {
+                    @Html.ActionLink("Iniciar Sesión", "Loguearse", "home")
+                }
+
+                        </li>
 
 
 
-                  
-                </ul>
+
+                    </ul>
             </nav>
             <!-- //nav -->
         </div>
