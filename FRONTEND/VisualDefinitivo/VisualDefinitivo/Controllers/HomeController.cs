@@ -414,5 +414,89 @@ namespace PaginaVisual.Controllers
         }
 
 
+
+        // GET: Receta/Create
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        // POST: Receta/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(ClientesViewModel receta)
+        {
+
+            IEnumerable<ClientesViewModel> clientes = traerClientes();
+            foreach (var item in clientes)
+            {
+                if (item.vCorreo == receta.vCorreo)
+                {
+                    ModelState.AddModelError(string.Empty, "ese ya correo esta registrado");
+
+                    return View(receta);
+                }
+            }
+
+
+                
+                    using (var client = new HttpClient())
+                    {
+                        client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
+
+                        //HTTP POST
+                        var postTask = client.PostAsJsonAsync<ClientesViewModel>("cliente/Insert", receta);
+                        postTask.Wait();
+
+                        var result = postTask.Result;
+                        if (result.IsSuccessStatusCode)
+                        {
+
+
+                        return RedirectToAction("Index");
+
+                         }
+                    }
+
+
+            ModelState.AddModelError(string.Empty, "Error inesperado");
+
+            return View(receta);
+
+        }
+
+
+        public IEnumerable<ClientesViewModel> traerClientes() {
+            IEnumerable<ClientesViewModel> recetas = null;
+
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("cliente/GetAll");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<IList<ClientesViewModel>>();
+                    readTask.Wait();
+
+                    recetas = readTask.Result;
+                }
+                else //web api sent error response 
+                {
+                    //log response status here..
+
+                    recetas = Enumerable.Empty<ClientesViewModel>();
+
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return recetas;
+        }
     }
 }
