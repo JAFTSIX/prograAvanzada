@@ -18,6 +18,7 @@ namespace VisualDefinitivo
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            VisualDefinitivo.Controllers.mapeador.CrearMapas();
         }
     }
 }

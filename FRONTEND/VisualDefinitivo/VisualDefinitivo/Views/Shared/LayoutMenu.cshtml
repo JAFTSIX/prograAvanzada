@@ -1,4 +1,4 @@
-﻿@VisualDefinitivo.Models.Cliente.INSTANCIA 
+﻿
 @{
     ViewBag.Title = "LayoutMenu";
 }
@@ -100,7 +100,15 @@
                             {
 
                                 <h1></h1>
-                            <li>@VisualDefinitivo.Models.Cliente.INSTANCIA.vNombre</li>
+                            <li>@using (Html.BeginForm("personal", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            { 
+                            
+                              <input type="submit" value="@VisualDefinitivo.Models.Cliente.INSTANCIA.vNombre" class="btn btn-default" />
+                            }
+                                    </li>
+
+
+                            
                             using (Html.BeginForm("logout", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                             { 
                             
@@ -124,9 +132,7 @@
 
 
 
-                    <li>
-                        @Html.ActionLink("MANTENIMIENTO", "Index", "Mantenimiento")
-                    </li>
+                  
                 </ul>
             </nav>
             <!-- //nav -->

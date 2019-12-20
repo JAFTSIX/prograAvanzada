@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Visual.Models.EncabezadoViewModel>
+
+@{
+    ViewBag.Title = "historialCompras";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2> nombre</h2>
+<div>
+    @Html.ActionLink("Historial de compras", "personal", "Home")
+    nombre @VisualDefinitivo.Models.Cliente.INSTANCIA.vNombre
+    <br />
+
+    <h2> apellido</h2>
+    apellido @VisualDefinitivo.Models.Cliente.INSTANCIA.vApellido
+
+</div>
+
+<table class="table">
+
+
+    <tr>
+
+        <th>
+           no Compra
+        </th>
+        <th>
+            fecha
+        </th>
+        <th>
+            total
+        </th>
+        
+        <th>
+            <div class="container">
+        </th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.no_Compra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.total)
+                </td>
+
+            </tr>
+        }
+    }
+</table>

@@ -93,13 +93,13 @@ namespace Visual.Controllers
 
                 //HTTP POST
                 var postTask = client.PostAsJsonAsync<RecetasViewModel>("recetas/Insert", receta);
-                postTask.Wait();
+                    postTask.Wait();
 
-                var result = postTask.Result;
-                if (result.IsSuccessStatusCode)
-                {
-                    return RedirectToAction("Index");
-                }
+                    var result = postTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("Index");
+                    }
             }
 
             ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");

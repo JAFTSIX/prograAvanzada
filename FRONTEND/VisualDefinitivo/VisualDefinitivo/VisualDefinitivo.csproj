@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MantenimientoController.cs" />
+    <Compile Include="Controllers\mapeador.cs" />
     <Compile Include="Controllers\RecetaMantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -217,6 +218,8 @@
     <Content Include="Views\Home\ProductoUnico.cshtml" />
     <Content Include="Views\Home\RecetaUnica.cshtml" />
     <Content Include="Views\Home\Productos.cshtml" />
+    <Content Include="Views\Home\personal.cshtml" />
+    <Content Include="Views\Home\historialCompras.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
