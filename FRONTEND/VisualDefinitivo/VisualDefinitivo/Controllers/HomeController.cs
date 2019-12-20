@@ -57,18 +57,66 @@ namespace PaginaVisual.Controllers
             return View();
         }
 
-        public ActionResult blog()
+        public ActionResult ProductoUnico(int? id)
         {
-            ViewBag.Message = "Your blog page.";
+            ArticuloViewModel producto = null;
 
-            return View();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("articulo/GetOneById/5?id=" + id.ToString());
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<ArticuloViewModel>();
+                    readTask.Wait();
+
+                    producto = (ArticuloViewModel)readTask.Result;
+                }
+                else //web api sent error response 
+                {
+                    //log response status here..
+
+                    producto = null;
+
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return View(producto);
         }
 
-        public ActionResult gallery()
+        public ActionResult RecetaUnica(int? id)
         {
-            ViewBag.Message = "Your gallery page.";
+            RecetasViewModel receta = null;
 
-            return View();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<RecetasViewModel>();
+                    readTask.Wait();
+
+                    receta = (RecetasViewModel)readTask.Result;
+                }
+                else //web api sent error response 
+                {
+                    //log response status here..
+
+                    receta = null;
+
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return View(receta);
         }
 
         public ActionResult Recetas()
@@ -77,7 +125,7 @@ namespace PaginaVisual.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
                 //HTTP GET
                 var responseTask = client.GetAsync("recetas/GetAll");
                 responseTask.Wait();
@@ -104,9 +152,33 @@ namespace PaginaVisual.Controllers
 
         public ActionResult Productos()
         {
-            ViewBag.Message = "Your single page.";
+            IEnumerable<ArticuloViewModel> productos = null;
 
-            return View();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("articulo/GetAll");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<IList<ArticuloViewModel>>();
+                    readTask.Wait();
+
+                    productos = readTask.Result;
+                }
+                else //web api sent error response 
+                {
+                    //log response status here..
+
+                    productos = Enumerable.Empty<ArticuloViewModel>();
+
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return View(productos);
         }
 
 

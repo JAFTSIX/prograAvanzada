@@ -1,0 +1,58 @@
+﻿@model Visual.Models.RecetasViewModel
+
+@{
+    ViewBag.Title = "RecetaUnica";
+}
+
+<h2>RecetaUnica</h2>
+
+<div class="container">
+    <div>
+        <h4>RecetasViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                <h4 class="pb-3">
+                    Nombre
+                </h4>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+
+            <dd>
+                @Html.DisplayFor(model => model.Dfecha_publicacion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.vTexto)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.vTexto)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.vimgurl)
+            </dt>
+
+            <dd>
+                <img src="@Html.DisplayFor(model => model.vimgurl)" alt="news image" class="img-fluid">
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.vVidurl)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.vVidurl)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Principal", "Index")
+    </p>
+</div>

@@ -1,0 +1,45 @@
+﻿@model Visual.Models.ArticuloViewModel
+
+@{
+    ViewBag.Title = "RecetaUnica";
+}
+
+<h2>RecetaUnica</h2>
+
+<div class="container">
+    <div>
+        <h4>RECETA</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                <h4 class="pb-3">
+                    Nombre
+                </h4>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+
+            <dt>
+                <img src="@Html.DisplayFor(model => model.Vurl)" alt="news image" class="img-fluid">
+            </dt>
+            <dd>
+                Descripción
+            </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Descrip)
+            </dd>
+
+            <dt>
+                @Html.DisplayFor(model => model.Precio)
+            </dt>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Principal", "Index")
+    </p>
+</div>
+

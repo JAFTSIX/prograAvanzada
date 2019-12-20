@@ -18,7 +18,7 @@
         <div class="row mt-lg-5 mt-md-4 mt-3">
             <div class="col-lg-6 blog-left-sub my-3">
                 <h4 class="pb-3">
-                    <a href="single.html">@Html.DisplayFor(modelItem => item.nombre)</a>
+                    @Html.ActionLink(item.nombre, "RecetaUnica", new { id = item.pkReceta })
                 </h4>
                 <p>
                     @Html.DisplayFor(modelItem => item.vTexto)
