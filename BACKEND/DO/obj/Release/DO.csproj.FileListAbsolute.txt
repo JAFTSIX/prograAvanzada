@@ -1,5 +1,0 @@
-C:\proyectofinal\prograAvanzada\BACKEND\DO\bin\Release\DO.dll
-C:\proyectofinal\prograAvanzada\BACKEND\DO\bin\Release\DO.pdb
-C:\proyectofinal\prograAvanzada\BACKEND\DO\obj\Release\DO.csprojAssemblyReference.cache
-C:\proyectofinal\prograAvanzada\BACKEND\DO\obj\Release\DO.dll
-C:\proyectofinal\prograAvanzada\BACKEND\DO\obj\Release\DO.pdb

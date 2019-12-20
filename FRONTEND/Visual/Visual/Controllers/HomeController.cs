@@ -17,7 +17,7 @@ namespace PaginaVisual.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
                 //HTTP GET
                 var responseTask = client.GetAsync("recetas/GetAll");
                 responseTask.Wait();

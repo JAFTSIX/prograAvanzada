@@ -17,7 +17,7 @@ namespace Visual.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
                 //HTTP GET
                 var responseTask = client.GetAsync("recetas/GetAll");
                 responseTask.Wait();
@@ -49,7 +49,7 @@ namespace Visual.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
                 //HTTP GET
                 var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
                 responseTask.Wait();
@@ -89,7 +89,7 @@ namespace Visual.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
 
                 //HTTP POST
                 var postTask = client.PostAsJsonAsync<RecetasViewModel>("recetas/Insert", receta);
@@ -114,7 +114,7 @@ namespace Visual.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
                 //HTTP GET
                 var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
                 responseTask.Wait();
@@ -140,7 +140,7 @@ namespace Visual.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
 
                 //HTTP POST
                 var putTask = client.PutAsJsonAsync<RecetasViewModel>("recetas/Update", receta);
@@ -163,7 +163,7 @@ namespace Visual.Controllers
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
                 //HTTP GET
                 var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
                 responseTask.Wait();
@@ -188,7 +188,7 @@ namespace Visual.Controllers
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
 
                 //HTTP POST
                 var postTask = client.PostAsJsonAsync<RecetasViewModel>("recetas/Delete", receta);
