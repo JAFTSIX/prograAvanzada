@@ -6,51 +6,47 @@
 
 <h2>Productos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.existencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Precio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descrip)
-        </th>
-        <th>
-            <div class="container">
-        </th>
-        <th></th>
-    </tr>
-    @if(Model!=null){
-    foreach (var item in Model)
-    {
+<div class="container">
+    <table class="table">
         <tr>
-            <td>
-                @Html.ActionLink(item.nombre, "RecetaUnica", new { id = item.no_articulo })
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.existencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descrip)
-            </td>
-            <td>
-                <img src="@Html.DisplayFor(modelItem => item.Vurl)" alt="news image" class="img-fluid">
-            </td>
-            <td>
-                @Html.ActionLink("Principal", "Index")
-            </td>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Cantidad
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Descripción
+            </th>
         </tr>
-    }
-    }
-</table>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.nombre, "ProductoUnico", new { id = item.no_articulo })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.existencia)
+                    </td>
+                    <td>
+                        $@Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descrip)
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.Vurl)" alt="news image" class="img-fluid">
+                    </td>
+                    <td>
+                        @Html.ActionLink("Principal", "Index")
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>

@@ -31,11 +31,15 @@
             <dd>
                 @Html.DisplayFor(model => model.Descrip)
             </dd>
-
+            <dd>
+                Precio
+            </dd>
             <dt>
-                @Html.DisplayFor(model => model.Precio)
+                $@Html.DisplayFor(model => model.Precio)
             </dt>
-
+            <dd>
+            @Html.ActionLink("Comprar", "Index", "CarritoItem")
+            </dd>
         </dl>
     </div>
     <p>
