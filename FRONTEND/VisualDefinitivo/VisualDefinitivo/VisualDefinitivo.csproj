@@ -129,6 +129,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MantenimientoController.cs" />
     <Compile Include="Controllers\mapeador.cs" />
+    <Compile Include="Controllers\ProductoMantController.cs" />
     <Compile Include="Controllers\RecetaMantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -220,9 +221,15 @@
     <Content Include="Views\Home\Productos.cshtml" />
     <Content Include="Views\Home\personal.cshtml" />
     <Content Include="Views\Home\historialCompras.cshtml" />
+    <Content Include="Views\ProductoMant\create.cshtml" />
+    <Content Include="Views\ProductoMant\Index.cshtml" />
+    <Content Include="Views\ProductoMant\Delete.cshtml" />
+    <Content Include="Views\ProductoMant\Edit.cshtml" />
+    <Content Include="Views\ProductoMant\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ClienteMant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
