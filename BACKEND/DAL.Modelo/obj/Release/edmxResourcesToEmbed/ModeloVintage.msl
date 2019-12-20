@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDVintageModelStoreContainer" CdmEntityContainer="ConexionVintage">
+    <EntitySetMapping Name="tb_Articulo">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Articulo">
+        <MappingFragment StoreEntitySet="tb_Articulo">
+          <ScalarProperty Name="Vurl" ColumnName="Vurl" />
+          <ScalarProperty Name="no_articulo" ColumnName="no_articulo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="existencia" ColumnName="existencia" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Cliente">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Cliente">
+        <MappingFragment StoreEntitySet="tb_Cliente">
+          <ScalarProperty Name="vCorreo" ColumnName="vCorreo" />
+          <ScalarProperty Name="vROL" ColumnName="vROL" />
+          <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
+          <ScalarProperty Name="vNombre" ColumnName="vNombre" />
+          <ScalarProperty Name="vApellido" ColumnName="vApellido" />
+          <ScalarProperty Name="vApelldo2" ColumnName="vApelldo2" />
+          <ScalarProperty Name="vContra" ColumnName="vContra" />
+          <ScalarProperty Name="iEdad" ColumnName="iEdad" />
+          <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Direccion">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Direccion">
+        <MappingFragment StoreEntitySet="tb_Direccion">
+          <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+          <ScalarProperty Name="Vpais" ColumnName="Vpais" />
+          <ScalarProperty Name="VCiudad" ColumnName="VCiudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Encabezado">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Encabezado">
+        <MappingFragment StoreEntitySet="tb_Encabezado">
+          <ScalarProperty Name="no_Compra" ColumnName="no_Compra" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="pend" ColumnName="pend" />
+          <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Favoritos">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Favoritos">
+        <MappingFragment StoreEntitySet="tb_Favoritos">
+          <ScalarProperty Name="pkFavoritos" ColumnName="pkFavoritos" />
+          <ScalarProperty Name="fkReceta" ColumnName="fkReceta" />
+          <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Historial">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Historial">
+        <MappingFragment StoreEntitySet="tb_Historial">
+          <ScalarProperty Name="pkHistorial" ColumnName="pkHistorial" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="iCliente_id" ColumnName="iCliente_id" />
+          <ScalarProperty Name="fkReceta" ColumnName="fkReceta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_LineaPedido">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_LineaPedido">
+        <MappingFragment StoreEntitySet="tb_LineaPedido">
+          <ScalarProperty Name="no_Pedido" ColumnName="no_Pedido" />
+          <ScalarProperty Name="no_articulo" ColumnName="no_articulo" />
+          <ScalarProperty Name="unidades" ColumnName="unidades" />
+          <ScalarProperty Name="precio_Unidad" ColumnName="precio_Unidad" />
+          <ScalarProperty Name="precio_Total" ColumnName="precio_Total" />
+          <ScalarProperty Name="no_Compra" ColumnName="no_Compra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Receta">
+      <EntityTypeMapping TypeName="BDVintageModel.tb_Receta">
+        <MappingFragment StoreEntitySet="tb_Receta">
+          <ScalarProperty Name="pkReceta" ColumnName="pkReceta" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="Dfecha_publicacion" ColumnName="Dfecha_publicacion" />
+          <ScalarProperty Name="vTexto" ColumnName="vTexto" />
+          <ScalarProperty Name="vimgurl" ColumnName="vimgurl" />
+          <ScalarProperty Name="vVidurl" ColumnName="vVidurl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

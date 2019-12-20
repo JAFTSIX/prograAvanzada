@@ -1,0 +1,11 @@
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\DAL.Entidades.dll.config
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\DAL.Entidades.dll
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\DAL.Entidades.pdb
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\EntityFramework.dll
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\EntityFramework.SqlServer.dll
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\EntityFramework.xml
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\bin\Release\EntityFramework.SqlServer.xml
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\obj\Release\DAL.Entidades.csprojAssemblyReference.cache
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\obj\Release\DAL.Entidades.csproj.CopyComplete
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\obj\Release\DAL.Entidades.dll
+C:\proyectofinal\prograAvanzada\BACKEND\DAL.Entidades\obj\Release\DAL.Entidades.pdb

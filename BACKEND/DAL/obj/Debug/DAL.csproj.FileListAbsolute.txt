@@ -45,3 +45,5 @@ C:\ProyectoFinal\prograAvanzada\BACKEND\DAL\obj\Debug\DAL.dll
 C:\ProyectoFinal\prograAvanzada\BACKEND\DAL\obj\Debug\DAL.pdb
 C:\prograAvanzada\BACKEND\DAL\bin\Debug\DO.dll
 C:\prograAvanzada\BACKEND\DAL\bin\Debug\DO.pdb
+C:\proyectofinal\prograAvanzada\BACKEND\DAL\bin\Debug\DO.dll
+C:\proyectofinal\prograAvanzada\BACKEND\DAL\bin\Debug\DO.pdb
