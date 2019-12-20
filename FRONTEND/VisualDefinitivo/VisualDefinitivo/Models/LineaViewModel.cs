@@ -14,4 +14,16 @@ namespace Visual.Models
         public Nullable<double> precio_Total { get; set; }
         public int no_Compra { get; set; }
     }
+
+    public class Carrito
+    {
+        public ArticuloViewModel articulo { get; set; }
+        public int cantidad { get; set; }
+
+        public Carrito(ArticuloViewModel articulo, int cantidad)
+        {
+            this.articulo = articulo;
+            this.cantidad = cantidad;
+        }
+    }
 }
