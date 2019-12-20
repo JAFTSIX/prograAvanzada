@@ -209,6 +209,9 @@
     <Content Include="Views\RecetaMant\Index.cshtml" />
     <Content Include="Views\Shared\LayoutMenu.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Home\ProductoUnico.cshtml" />
+    <Content Include="Views\Home\RecetaUnica.cshtml" />
+    <Content Include="Views\Home\Productos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
