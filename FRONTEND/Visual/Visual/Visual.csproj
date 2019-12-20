@@ -173,7 +173,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\RecetaController.cs" />
+    <Compile Include="Controllers\MantenimientoController.cs" />
+    <Compile Include="Controllers\RecetaMantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,15 +275,15 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Recetas.cshtml" />
     <Content Include="Views\Shared\LayoutMenu.cshtml" />
-    <Content Include="Views\Mantenimiento\Receta\Create.cshtml" />
-    <Content Include="Views\Mantenimiento\Receta\Delete.cshtml" />
-    <Content Include="Views\Mantenimiento\Receta\Details.cshtml" />
-    <Content Include="Views\Mantenimiento\Receta\Edit.cshtml" />
-    <Content Include="Views\Mantenimiento\Receta\Index.cshtml" />
+    <Content Include="Views\RecetaMant\Delete.cshtml" />
+    <Content Include="Views\RecetaMant\Details.cshtml" />
+    <Content Include="Views\RecetaMant\Edit.cshtml" />
+    <Content Include="Views\RecetaMant\Index.cshtml" />
+    <Content Include="Views\RecetaMant\Create.cshtml" />
+    <Content Include="Views\Mantenimiento\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\RecetaMantenimiento\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
