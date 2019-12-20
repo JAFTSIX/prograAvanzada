@@ -1,4 +1,4 @@
-﻿
+﻿@VisualDefinitivo.Models.Cliente.INSTANCIA 
 @{
     ViewBag.Title = "LayoutMenu";
 }
@@ -87,9 +87,40 @@
                     <li>
                         @Html.ActionLink("Registrarse", "Registro", "Home")
                     </li>
+
+
                     <li>
-                        @Html.ActionLink("Iniciar Sesión", "Login", "Account")
+                        @if (Session["login"] != null)
+                        {
+
+                            if (Session["login"] == "si")
+                            {
+
+                                <h1></h1>
+                            <li>@VisualDefinitivo.Models.Cliente.INSTANCIA.vNombre</li>
+                            using (Html.BeginForm("logout", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            { 
+                            
+                              <input type="submit" value="Logout" class="btn btn-default" />
+                            }
+                             
+
+                            }
+                            else if (Session["login"] == "no")
+                            {
+                            @Html.ActionLink("Iniciar Sesión", "Loguearse", "home")
+                            }
+
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Iniciar Sesión", "Loguearse", "home")
+                    }
+
                     </li>
+
+
+
                     <li>
                         @Html.ActionLink("MANTENIMIENTO", "Index", "Mantenimiento")
                     </li>

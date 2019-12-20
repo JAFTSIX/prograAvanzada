@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -130,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ArticuloViewModel.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClientesViewModel.cs" />
     <Compile Include="Models\DirViewModel.cs" />
     <Compile Include="Models\EncabezadoViewModel.cs" />
@@ -209,6 +213,7 @@
     <Content Include="Views\RecetaMant\Index.cshtml" />
     <Content Include="Views\Shared\LayoutMenu.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Home\loguearse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
