@@ -10,18 +10,18 @@ namespace VisualDefinitivo.Controllers
     public class CarritoController : Controller
     {
         // GET: Carrito
-        public ActionResult AgregarCarrito(ArticuloViewModel articulo, int cant)
+        public ActionResult AgregarCarrito(Carrito carro)
         {
             if (Session["carrito"] == null)
             {
                 List<Carrito> compra = new List<Carrito>();
-                compra.Add(new Carrito(articulo, cant));
+                compra.Add(new Carrito(carro.articulo, carro.cantidad));
                 Session["carrito"] = compra;
             }
             else
             {
                 List<Carrito> compra = (List<Carrito>)Session["carrito"];
-                compra.Add(new Carrito(articulo, cant));
+                compra.Add(new Carrito(carro.articulo, carro.cantidad));
                 Session["carrito"] = compra;
             }
             return View();
