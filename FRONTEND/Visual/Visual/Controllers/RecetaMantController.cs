@@ -8,7 +8,7 @@ using Visual.Models;
 
 namespace Visual.Controllers
 {
-    public class RecetaController : Controller
+    public class RecetaMantController : Controller
     {
         // GET: Receta
         public ActionResult Index()
@@ -57,7 +57,7 @@ namespace Visual.Controllers
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<IList<RecetasViewModel>>();
+                    var readTask = result.Content.ReadAsAsync<RecetasViewModel>();
                     readTask.Wait();
 
                     receta = (RecetasViewModel)readTask.Result;
@@ -66,7 +66,7 @@ namespace Visual.Controllers
                 {
                     //log response status here..
 
-                    receta = (RecetasViewModel)Enumerable.Empty<RecetasViewModel>();
+                    receta = null;
 
                     ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
                 }
@@ -108,7 +108,7 @@ namespace Visual.Controllers
         }
 
         // GET: Receta/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
             RecetasViewModel receta = null;
 
@@ -156,26 +156,54 @@ namespace Visual.Controllers
             return View(receta);
         }
 
-        // GET: Receta/Delete/5
-        public ActionResult Delete(int id)
+        // GET: Receta/Delete
+        public ActionResult Delete(int? id)
+        {
+            RecetasViewModel receta = null;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://localhost:44311/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("recetas/GetOneById/5?id=" + id.ToString());
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<RecetasViewModel>();
+                    readTask.Wait();
+
+                    receta = readTask.Result;
+                }
+            }
+            return View(receta);
+        }
+
+
+        // POST: Receta/Delete/
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(RecetasViewModel receta)
         {
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://localhost:44311/api/");
 
-                //HTTP DELETE
-                var deleteTask = client.DeleteAsync("recetas/Delete" + id.ToString());
-                deleteTask.Wait();
+                //HTTP POST
+                var postTask = client.PostAsJsonAsync<RecetasViewModel>("recetas/Delete", receta);
+                postTask.Wait();
 
-                var result = deleteTask.Result;
+                var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-
                     return RedirectToAction("Index");
                 }
             }
 
-            return RedirectToAction("Index");
+            ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");
+
+            return View(receta);
         }
 
         // POST: Receta/Delete/5

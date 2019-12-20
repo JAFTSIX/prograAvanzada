@@ -62,9 +62,16 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
+        @Html.Hidden("pkReceta", Model.pkReceta)
+        @Html.Hidden("nombre", Model.nombre)
+        @Html.Hidden("Dfecha_publicacion", Model.Dfecha_publicacion)
+        @Html.Hidden("vtexto", Model.vTexto)
+        @Html.Hidden("vimgurl", Model.vimgurl)
+        @Html.Hidden("vVidurl", Model.vVidurl)
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
