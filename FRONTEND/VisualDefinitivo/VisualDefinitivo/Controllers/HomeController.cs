@@ -418,6 +418,19 @@ namespace PaginaVisual.Controllers
         // GET: Receta/Create
         public ActionResult Register()
         {
+            
+            /*var item = traerDirecciones();
+
+            List<SelectListItem> lista = new List<SelectListItem>();
+
+            foreach (var direcciones in item)
+            {
+                lista.Add(new SelectListItem { Text=direcciones.Vpais+"-"+ direcciones.VCiudad,Value=""+direcciones.id_direccion });
+            }
+
+            VisualDefinitivo.Models.RegisterViewModel variable=new VisualDefinitivo.Models.RegisterViewModel() ;
+            ViewBag.Listado= lista
+            */
             return View();
         }
 
@@ -428,6 +441,10 @@ namespace PaginaVisual.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(ClientesViewModel receta)
         {
+
+            
+            receta.vROL = "COMUN";
+            //receta.id_direccion=paises.paises_items. ;
 
             IEnumerable<ClientesViewModel> clientes = traerClientes();
             foreach (var item in clientes)
@@ -492,6 +509,40 @@ namespace PaginaVisual.Controllers
                     //log response status here..
 
                     recetas = Enumerable.Empty<ClientesViewModel>();
+
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return recetas;
+        }
+
+
+
+        public IEnumerable<DirViewModel> traerDirecciones()
+        {
+            IEnumerable<DirViewModel> recetas = null;
+
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://apicocina.azurewebsites.net/api/");
+                //HTTP GET
+                var responseTask = client.GetAsync("dir/GetAll");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<IList<DirViewModel>>();
+                    readTask.Wait();
+
+                    recetas = readTask.Result;
+                }
+                else //web api sent error response 
+                {
+                    //log response status here..
+
+                    recetas = Enumerable.Empty<DirViewModel>();
 
                     ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
                 }

@@ -145,6 +145,7 @@
     <Compile Include="Models\HistorialViewModel.cs" />
     <Compile Include="Models\LineaViewModel.cs" />
     <Compile Include="Models\RecetasViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +236,7 @@
     <Content Include="Views\ClienteMant\Delete.cshtml" />
     <Content Include="Views\HistorialMant\Index.cshtml" />
     <Content Include="Views\HistorialMant\Details.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
