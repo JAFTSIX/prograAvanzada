@@ -15,6 +15,8 @@ namespace VisualDefinitivo.Controllers
                 cfg.CreateMap<Historialmostrar, HistorialViewModel>();
                 cfg.CreateMap<ClientesViewModel, VisualDefinitivo.Models.Cliente>();
                 cfg.CreateMap<VisualDefinitivo.Models.Cliente, ClientesViewModel>();
+                //cfg.CreateMap<Carrito, LineaViewModel>();
+                //cfg.CreateMap<LineaViewModel, Carrito>();
             });
 
         }
